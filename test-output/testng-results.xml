@@ -1,43 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-06T16:24:59 IST" name="Default suite" finished-at="2024-03-06T16:25:02 IST" duration-ms="2637">
+  <suite started-at="2024-03-06T16:58:44 IST" name="Suite" finished-at="2024-03-06T16:58:45 IST" duration-ms="1109">
     <groups>
     </groups>
-    <test started-at="2024-03-06T16:24:59 IST" name="Default test" finished-at="2024-03-06T16:25:02 IST" duration-ms="2637">
-      <class name="com.parameters.Parametersample1">
-        <test-method is-config="true" signature="launchbrow(java.lang.String)[pri:0, instance:com.parameters.Parametersample1@750e2b97]" started-at="2024-03-06T16:24:59 IST" name="launchbrow" finished-at="2024-03-06T16:25:02 IST" duration-ms="2579" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2024-03-06T16:58:44 IST" name="listdemo" finished-at="2024-03-06T16:58:45 IST" duration-ms="1109">
+      <class name="com.listners.TestClass1">
+        <test-method signature="test1()[pri:0, instance:com.listners.TestClass1@29215f06]" started-at="2024-03-06T16:58:44 IST" name="test1" finished-at="2024-03-06T16:58:44 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchbrow -->
-        <test-method signature="m1(java.lang.String)[pri:0, instance:com.parameters.Parametersample1@750e2b97]" started-at="2024-03-06T16:25:02 IST" name="m1" finished-at="2024-03-06T16:25:02 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
+        </test-method> <!-- test1 -->
+        <test-method signature="test2()[pri:0, instance:com.listners.TestClass1@29215f06]" started-at="2024-03-06T16:58:44 IST" name="test2" finished-at="2024-03-06T16:58:45 IST" duration-ms="1016" status="FAIL">
+          <exception class="org.testng.internal.thread.ThreadTimeoutException">
             <message>
-              <![CDATA[
-Parameter 'url' is required by @Test on method m1 but has not been marked @Optional or defined
-in C:\Users\sanni\AppData\Local\Temp\testng-eclipse--343212894\testng-customsuite.xml]]>
+              <![CDATA[Method com.listners.TestClass1.test2() didn't finish within the time-out 1000]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'url' is required by @Test on method m1 but has not been marked @Optional or defined
-in C:\Users\sanni\AppData\Local\Temp\testng-eclipse--343212894\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:267)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-at org.testng.internal.Parameters.createParameters(Parameters.java:693)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:888)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:737)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:915)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+              <![CDATA[org.testng.internal.thread.ThreadTimeoutException: Method com.listners.TestClass1.test2() didn't finish within the time-out 1000
+at java.base@17.0.9/java.lang.Thread.sleep(Native Method)
+at app//com.listners.TestClass1.test2(TestClass1.java:15)
+at java.base@17.0.9/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base@17.0.9/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base@17.0.9/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base@17.0.9/java.lang.reflect.Method.invoke(Method.java:568)
+at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at app//org.testng.internal.invokers.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:47)
+at app//org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:76)
+at app//org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:11)
+at java.base@17.0.9/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.thread.ThreadTimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test3()[pri:0, instance:com.listners.TestClass1@29215f06]" started-at="2024-03-06T16:58:45 IST" name="test3" finished-at="2024-03-06T16:58:45 IST" depends-on-methods="com.listners.TestClass1.test2" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method com.listners.TestClass1.test3() on instance com.listners.TestClass1@29215f06 depends on not successfully finished methods 
+[com.listners.TestClass1.test2() on instance com.listners.TestClass1@29215f06]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method com.listners.TestClass1.test3() on instance com.listners.TestClass1@29215f06 depends on not successfully finished methods 
+[com.listners.TestClass1.test2() on instance com.listners.TestClass1@29215f06]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
@@ -58,11 +68,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- m1 -->
-      </class> <!-- com.parameters.Parametersample1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- test3 -->
+      </class> <!-- com.listners.TestClass1 -->
+    </test> <!-- listdemo -->
+  </suite> <!-- Suite -->
 </testng-results>

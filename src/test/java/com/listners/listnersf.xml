@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.listners.ItestlistnerClass"></listener>	
+	</listeners>
+	 <test name="listdemo">
+		<classes>
+			<class name="com.listners.TestClass1">
+			</class>
+		</classes>
+	</test> 
+<!-- 	<test name="listdem02">
+		<classes>
+			<class name="com.listners.TestClass1">
+				<methods>
+					<include name="test1"/>
+				<include name="test2"/>
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+</suite>
