@@ -11,11 +11,15 @@ import org.testng.annotations.Test;
 
 public class Parametersample1 {
 	
+	/*
+	 * Execute this program with testng.xml
+	 */
+	
 	WebDriver driver;
 	
-	@Parameters("browsername")
+	@Parameters("browsername") 
 	@BeforeTest
-	public void launchbrow(@Optional("chrome") String Browsername) {
+	public void launchbrow(@Optional("chrome") String Browsername) { 
 		switch(Browsername) {
 		case "chrome":
 			driver=new ChromeDriver();
@@ -34,7 +38,7 @@ public class Parametersample1 {
 	@Parameters("url")
 	@Test
 	public  void m1(String urls) {
-		driver.get(urls);
+		driver.navigate().to(urls);
 		driver.close();
 	}
 
